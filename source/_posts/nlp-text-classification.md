@@ -4,7 +4,7 @@ date: 2018-04-23 20:46:23
 categories: [自然语言处理, NLP, 机器学习]
 author: Hongxin Liu
 mathjax: true
-thumbnail: /img/detection_cover.png
+thumbnail: https://cdn-images-1.medium.com/max/1600/1*HgXA9v1EsqlrRDaC_iORhQ.png
 ---
 # 特征工程
 在机器学习任务中，特征工程是最繁琐最耗时的。有人认为特征决定了结果的上限，而模型则是去逼近这个上限。文本分类任务中，特征工程通常包括文本预处理、文本表达、特征提取。
