@@ -9,7 +9,9 @@ npm install -g hexo-cli
 
 ## New post
 `hexo new post <title>`
-Make sure your articles are in source/_posts/ .
+
+Make sure your articles are in source/_posts/
+
 **Don't use \_ in markdwon as em**
 
 ## Deploy
