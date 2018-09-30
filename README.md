@@ -19,5 +19,7 @@ npm install -g hexo-cli
 + thumbnail: 文章封面图，如果没有会有点丑。建议填http链接，也可本地文件路径。
 
 ## 部署
+
 先与远程仓库同步, pull & push
+
 `hexo g -d` or `hexo d -g`
