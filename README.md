@@ -11,7 +11,7 @@ npm install -g hexo-cli
 `hexo new post <title>`
 
 
-**要使用斜体时请使用\*标记，而不要用 \_ **
+** 要使用斜体时请使用\*标记，而不要用 \_ **
 
 ## 文章头部说明
 categories: 目录，字符串不需要使用“或'
