@@ -1,7 +1,7 @@
 ---
 title: NLP 文本分类问题
 date: 2018-04-23 20:46:23
-categories: [自然语言处理, NLP, 机器学习]
+categories: [自然语言处理,NLP,机器学习]
 author: Hongxin Liu
 mathjax: true
 thumbnail: https://cdn-images-1.medium.com/max/1600/1*HgXA9v1EsqlrRDaC_iORhQ.png
