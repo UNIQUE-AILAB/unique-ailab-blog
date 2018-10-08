@@ -178,7 +178,7 @@ $$x' = \frac{x-\mu}{\sigma}$$
 首先定义基本的评价标准
 
 |  | 预测为真 | 预测为假 |
-| :--: | :--: | :--: |
+| :---: | :---: | :---: |
 | 实际为真 | TP(真正例) | FN(假反例) |
 | 实际为假 | FP(假正例) | TN(真反例) |
 
@@ -210,9 +210,7 @@ $$F_\beta = \frac{(1+\beta^2) \times P \times R}{(\beta^2 \times P) + R}$$
 
 以召回率为横轴，精确率为纵轴，得到的曲线为P-R曲线。
 
-<div align=center>
 ![](/img/P-R)
-</div>
 
 当对两个模型进行比较时，我们可以根据他们P-R曲线下的面积(AP)判断，面积越大性能越好。
 
@@ -226,9 +224,7 @@ $$FPR = \frac{FP}{TN+FP}$$
 
 以FPR为横轴，TPR为纵轴即可得到ROC曲线。
 
-<div align=center>
 ![](/img/roc.png)
-</div>
 
 ### AUC
 
@@ -244,9 +240,7 @@ ROC曲线下的面积即为AUC，越大说明模型越好。__可以无视正负
 
 可以理解为一种特殊的卷积，只不过它会将feature map放大，达到上采样的效果。  
 
-<div align=center>
 ![](/img/no_padding_no_strides_transposed.gif)
-</div>
 
 上图可以理解3x3的卷积核，padding=2，stride=1的卷积操作。而同时，在特征图大小变化上，与padding=0，stride=1的卷积操作相反。  
 用pytorch实现时代码如下，其中kernel_size为3，stride与padding按其对应的卷积操作参数进行设置。
@@ -257,9 +251,7 @@ torch.nn.ConvTranspose2d(in_channels, out_channels, kernel_size, stride=1, paddi
 
 当卷积操作stride大于1时，此时其对应的转置卷积的stride小于1，此时被称为分数卷积(fractionally-strided convolution)，如下图：
 
-<div align=center>
 ![](/img/no_padding_strides_transposed.gif)
-</div>
 
 [more .gif are here](https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md)
 
@@ -268,15 +260,11 @@ torch.nn.ConvTranspose2d(in_channels, out_channels, kernel_size, stride=1, paddi
 
 空洞卷积可以在基本不增加计算量的前提下，增大感受野。之前如果需要扩大感受野，都是采用池化，但池化会造成分辨率下降。
 
-<div align=center>
 ![](/img/dilation.gif)
-</div>
 
 为了不损失数据的连续性，我们需要选择适当的各层空洞卷积参数，如下图的配置方案。
 
-<div align=center>
 ![](/img/dilated.png)
-</div>
 
 pytorch中实现有一个空洞的卷积操作，代码如下：
 
@@ -296,9 +284,7 @@ torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dil
 
 ### BN/LN/IN/GN/SN
 
-<div align=center>
 ![](/img/bn_ln_in_gn.png)
-</div>
 
 - batchNorm是在batch上，对NHW做归一化，对小batchsize效果不好；
 - layerNorm在通道方向上，对CHW归一化，主要对RNN作用明显；
