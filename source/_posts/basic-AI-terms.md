@@ -1,9 +1,10 @@
 ---
 title: AI基础知识？
 date: 2018-07-09 09:26:33
-tags: ['AI','术语','基础']
 author: Jiyang Qi
 mathjax: true
+thumbnail: /img/ml_thumbnail.jpg
+categories: [机器学习]
 ---
 
 大家有想补充或者更正的，可以跟我说或者自己加上去，或者考虑分成多篇
