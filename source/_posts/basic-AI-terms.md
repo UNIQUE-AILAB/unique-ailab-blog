@@ -1,12 +1,12 @@
 ---
 title: AI基础知识？
 date: 2018-07-09 09:26:33
-tags: ['人工智能','AI','术语','基础']
+tags: ['AI','术语','基础']
 author: Jiyang Qi
 mathjax: true
 ---
 
-一篇笔记向博客
+大家有想补充或者更正的，可以跟我说或者自己加上去，或者考虑分成多篇
 
 # 一些问题
 
@@ -288,6 +288,9 @@ torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dil
 
 空洞卷积感受野大的特点使其可以处理长序列问题，甚至可以达到和RNN相差无几的效果。
 
+### 可变形卷积(Deformable Convolutions)
+
+*TODO*
 
 ## 深度学习的各种归一化
 
@@ -328,7 +331,16 @@ torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dil
 6. 可能需要降维
 7. 划分训练集、验证集、测试集
 
+### 提高最终结果
+
+1. bagging/boosting大法
+2. 图片金字塔：对检测等任务，可以将图片缩放为不同大小再输入，最后综合多个结果
+
 ## 训练技巧
+
+### 预训练
+
+使用别人预训练的模型时，最好要保证自己的数据分布与别人的数据分布一致，比如对于图片分类，若用imagenet预训练模型，最好先将图片每个channel标准化
 
 ### batchsize大小
 
