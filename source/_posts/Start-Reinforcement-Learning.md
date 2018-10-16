@@ -4,7 +4,7 @@ date: 2018-09-16 22:36:03
 categories: [强化学习]
 author: Jiajie Shen
 mathjax: true
-thumbnail: /img/a_dog.png
+thumbnail: /img/a_dog.jpg
 ---
 
 填个强化学习入门的坑~
