@@ -14,6 +14,5 @@
 
 - **强化学习 / DreamerV3 · 2023**：[rl.png](https://user-images.githubusercontent.com/2111293/217355673-4abc0ce5-1a4b-4366-a08d-64754289d659.png)；[论文 / 项目来源](https://github.com/danijar/dreamerv3)。
 
-- **AI for Science / AlphaFold · 2021**：[ai4science.jpg](https://raw.githubusercontent.com/google-deepmind/alphafold/main/imgs/header.jpg)；[论文 / 项目来源](https://github.com/google-deepmind/alphafold)。
 
-Transformer 图来自 Harvard The Annotated Transformer 页面内嵌的原论文架构图；AlphaFold 使用官方项目头图，其余使用官方提供的方法图或结果图。
+Transformer 图来自 Harvard The Annotated Transformer 页面内嵌的原论文架构图，其余使用官方提供的方法图或结果图。

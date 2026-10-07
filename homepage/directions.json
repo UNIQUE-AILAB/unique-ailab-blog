@@ -118,25 +118,5 @@
       "image_source": "https://user-images.githubusercontent.com/2111293/217355673-4abc0ce5-1a4b-4366-a08d-64754289d659.png",
       "kind": "diagram"
     }
-  },
-  {
-    "slug": "ai4science",
-    "code": "AI4SCI",
-    "name": "AI for Science",
-    "english": "AI for Science",
-    "summary": "连接人工智能与科学问题，探索数据和模型驱动的科学发现。",
-    "topics": [
-      "生物医学",
-      "物理、化学与材料",
-      "地球环境与天文学"
-    ],
-    "cover": {
-      "file": "ai4science.jpg",
-      "label": "AlphaFold · 2021",
-      "alt": "AlphaFold 官方项目中的蛋白质结构配图",
-      "source": "https://github.com/google-deepmind/alphafold",
-      "image_source": "https://raw.githubusercontent.com/google-deepmind/alphafold/main/imgs/header.jpg",
-      "kind": "scene"
-    }
   }
 ]

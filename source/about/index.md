@@ -14,7 +14,6 @@ UNIQUE AI Lab 成立于2017年，由华中科技大学本科生自主成立，�
 - [3D 视觉（3D Vision）](/research/3d-vision/index.html)：研究三维重建、场景理解与三维生成，从二维观察走向空间建模。
 - [具身智能（Embodied AI）](/research/embodied-ai/index.html)：连接感知、决策与行动，探索智能体在环境交互中的学习与规划。
 - [强化学习（Reinforcement Learning）](/research/rl/index.html)：研究价值学习、策略优化与奖励设计，使智能体通过交互学习决策。
-- [AI for Science](/research/ai4science/index.html)：探索人工智能与生物医学、物理化学、材料及环境等领域的交叉，利用模型与数据支持科学发现。
 
 # Learn More
 [华中科技大学启明学院](https://baike.baidu.com/item/%E5%8D%8E%E4%B8%AD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%90%AF%E6%98%8E%E5%AD%A6%E9%99%A2)

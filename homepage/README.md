@@ -6,7 +6,7 @@
 
 ## 修改内容
 
-- `directions.json`：七个方向的名称、简述、标签、页面路径及封面来源。
+- `directions.json`：六个方向的名称、简述、标签、页面路径及封面来源。
 - `covers/`：本地论文 / 项目封面原图与来源记录，构建时复制到网站，避免外链图片失效。
 - `notes.json`：原有文章的标题、日期、作者、分类、摘要及原文路径。新增笔记时维护此索引，原文保存在 `source/_posts/`。
 - `articles/`：四篇可编辑的 HTML 正文；`notes.json` 的 `content` 指向正文片段。`related_directions` 支持跨方向收录，`date_label` 区分收录日期与写作日期。
@@ -27,7 +27,7 @@ python homepage/build.py --output ../UNIQUE-AILAB.github.io
 
 输出目标应是网站 fork 的检出目录：
 `https://github.com/AetherNoah/UNIQUE-AILAB.github.io`。
-脚本生成主页、CSS 和七个方向页，并修正历史 HTML 中的根路径链接以支持项目站点。
+脚本生成主页、CSS 和六个方向页，并修正历史 HTML 中的根路径链接以支持项目站点。
 重复构建不会重复添加路径前缀，也不会改写历史文章正文。
 
 提交本仓库的源码修改，再提交并推送网站仓库的生成结果。
