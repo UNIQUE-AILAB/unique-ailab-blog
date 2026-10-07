@@ -1,3 +1,8 @@
+# 新版团队主页
+
+新版主页与七个研究方向占位页的源码位于 `homepage/`。
+请先阅读 [维护与构建说明](homepage/README.md)。旧 Hexo 部署已停用，以下为历史博客使用说明。
+
 # 安装
 确保你安装了 npm, curl, git
 ``` shell

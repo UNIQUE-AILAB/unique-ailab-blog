@@ -77,9 +77,8 @@ theme: mic
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/UNIQUE-AILAB/UNIQUE-AILAB.github.io.git
-  branch: master
+  # Legacy Hexo deployment is disabled. See homepage/README.md for the new build.
+  type:
 
 #plugins:
     #- hexo-math

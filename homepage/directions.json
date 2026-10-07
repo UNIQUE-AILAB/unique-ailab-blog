@@ -1,0 +1,9 @@
+[
+  {"slug":"cv","code":"CV","name":"计算机视觉","english":"Computer Vision","summary":"从图像感知到视觉理解，探索让机器看见世界的方法。","topics":["图像识别与低层视觉","目标检测与语义分割","视觉推理与图像生成"]},
+  {"slug":"nlp","code":"NLP","name":"自然语言处理","english":"Natural Language Processing","summary":"理解语言、表示知识，探索语言模型与多模态交互。","topics":["语言表示与语义理解","文本生成与对话","大语言模型与多模态"]},
+  {"slug":"speech-audio","code":"AUDIO","name":"语音与音频","english":"Speech and Audio","summary":"从声音中理解信息，让语言与表达跨越文本的边界。","topics":["语音识别 ASR","语音合成 TTS","声音增强与歌声合成"]},
+  {"slug":"3d-vision","code":"3D","name":"3D 视觉","english":"3D Vision","summary":"从二维观察恢复三维结构，理解和生成空间中的世界。","topics":["三维重建","三维场景理解","三维资产生成"]},
+  {"slug":"embodied-ai","code":"EAI","name":"具身智能","english":"Embodied AI","summary":"连接感知、决策与行动，在环境交互中学习智能行为。","topics":["感知与多模态融合","动作学习与 VLA","世界模型与规划"]},
+  {"slug":"rl","code":"RL","name":"强化学习","english":"Reinforcement Learning","summary":"通过与环境交互学习策略，研究奖励、决策与泛化。","topics":["价值学习与策略优化","奖励设计与环境交互","RLHF 与多智能体"]},
+  {"slug":"ai4science","code":"AI4SCI","name":"AI for Science","english":"AI for Science","summary":"连接人工智能与科学问题，探索数据和模型驱动的科学发现。","topics":["生物医学","物理、化学与材料","地球环境与天文学"]}
+]
