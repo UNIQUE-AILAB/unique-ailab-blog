@@ -67,10 +67,9 @@ def note_list(notes):
     for note in notes:
         author = f' · {escape(note["author"])}' if note['author'] else ''
         date_label = escape(note.get('date_label', ''))
-        pdf_link = f' · <a href="/{escape(note["pdf"])}" download="{escape(note["title"], quote=True)}.pdf">下载 PDF（{note["pages"]} 页）</a>' if 'pdf' in note else ''
         items.append(f'''<li class="research-note"><h3><a href="/{escape(note['path'], quote=True)}">{escape(note['title'])}</a></h3>
 <p class="research-status">{date_label} <time datetime="{note['date']}">{note['date']}</time>{author}</p>
-<p>{escape(note['summary'])}</p><a href="/{escape(note['path'], quote=True)}">阅读全文 →</a>{pdf_link}</li>''')
+<p>{escape(note['summary'])}</p><a href="/{escape(note['path'], quote=True)}">阅读全文 →</a></li>''')
     return '<ul class="research-notes">' + ''.join(items) + '</ul>'
 
 
@@ -104,18 +103,17 @@ def relative_links(source, output, target):
                      for old, new in zip(source.split('\n'), updated.split('\n')))
 
 
-def pdf_note_page(template, note, directions):
+def article_page(template, note, directions):
     direction = next(d for d in directions if d['slug'] == note['direction'])
     page = detail(template, direction, [])
-    page = re.sub(r'<title>.*?</title>', f'<title>{escape(note["title"])} · Haoran Qian · Unique AI Lab</title>', page)
+    page = re.sub(r'<title>.*?</title>', f'<title>{escape(note["title"])} · {escape(note["author"])} · Unique AI Lab</title>', page)
+    page = page.replace('</head>', '<link rel="stylesheet" href="/css/typo.css">\n</head>')
     categories = ' · '.join(f'<a href="/research/{d["slug"]}/index.html#notes">{escape(d["name"])}</a>' for d in directions if belongs_to(note, d['slug']))
-    content = f'''<main id="main"><article class="research-detail pdf-note">
-<header><h1>{escape(note['title'])}</h1><p>Haoran Qian · 收录于 <time datetime="{note['date']}">{note['date']}</time> · {note['pages']} 页</p>
-<p>{categories}</p></header><p>{escape(note['summary'])}</p>
-<div class="pdf-actions"><a class="button" href="/{note['pdf']}" target="_blank" rel="noopener">打开 PDF 阅读</a>
-<a class="button" href="/{note['pdf']}" download="{escape(note['title'], quote=True)}.pdf">下载 PDF</a></div>
-<object class="pdf-reader" data="/{note['pdf']}" type="application/pdf" aria-label="{escape(note['title'], quote=True)} PDF 原文">
-<p>当前浏览器无法嵌入 PDF，请使用上方「打开 PDF 阅读」或「下载 PDF」。</p></object>
+    body = (HERE / note['content']).read_text(encoding='utf-8')
+    content = f'''<main id="main"><article class="research-detail note-article">
+<header><h1>{escape(note['title'])}</h1><p>{escape(note['author'])} · 收录于 <time datetime="{note['date']}">{note['date']}</time></p>
+<p>{categories}</p></header>
+<div class="typo note-body">{body}</div>
 <p><a href="/research/{direction['slug']}/index.html#notes">← 返回{escape(direction['name'])}笔记</a></p>
 </article></main>'''
     return re.sub(r'<main id="main">.*?</main>', lambda m: content, page, count=1, flags=re.S)
@@ -131,7 +129,7 @@ def main():
     output.mkdir(parents=True, exist_ok=True)
     (output / 'assets').mkdir(exist_ok=True)
     shutil.copytree(HERE / 'covers', output / 'assets/research-covers', dirs_exist_ok=True)
-    shutil.copytree(HERE / 'pdfs', output / 'assets/notes', dirs_exist_ok=True)
+    shutil.copytree(HERE / 'note-images', output / 'assets/note-images', dirs_exist_ok=True)
     (output / 'assets/homepage.css').write_text((HERE / 'site.css').read_text(encoding='utf-8'), encoding='utf-8')
     (output / 'index.html').write_text(home(template, directions, notes), encoding='utf-8')
     for direction in directions:
@@ -139,10 +137,10 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(detail(template, direction, notes), encoding='utf-8')
     for note in notes:
-        if 'pdf' in note:
+        if 'content' in note:
             target = output / note['path'] / 'index.html'
             target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_text(pdf_note_page(template, note, directions), encoding='utf-8')
+            target.write_text(article_page(template, note, directions), encoding='utf-8')
     for target in output.rglob('*.html'):
         source = target.read_text(encoding='utf-8')
         updated = relative_links(research_navigation(source, directions), output, target)

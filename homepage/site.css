@@ -24,9 +24,15 @@
 .research-note{padding:1.5rem 0;border-bottom:1px solid #eee}
 .research-note h3{margin-bottom:.5rem;overflow-wrap:anywhere}
 .research-note p{margin-bottom:.75rem}
-.pdf-note h1{font-size:2rem;line-height:1.4;overflow-wrap:anywhere}
-.pdf-actions{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0}
-.pdf-reader{display:block;width:100%;height:80vh;min-height:30rem;border:1px solid #d9dfe3;margin-bottom:1.5rem}
+.note-article h1{font-size:2rem;line-height:1.4;overflow-wrap:anywhere;text-transform:none}
+.note-body{line-height:1.9;overflow-wrap:anywhere}
+.note-body h2,.note-body h3{text-transform:none;letter-spacing:0;line-height:1.5}
+.note-body pre{max-width:100%;overflow-x:auto;white-space:pre;background:#f5f6f7;padding:1.25rem;border:1px solid #e4e7e9;line-height:1.7}
+.note-body pre code{font-family:Consolas,monospace;font-size:.85rem;white-space:pre;word-break:normal;overflow-wrap:normal;border:0;padding:0;background:none}
+.note-body figure{margin:1.5rem 0;text-align:center}
+.note-body figure img{display:inline-block;max-width:100%;height:auto;vertical-align:middle}
+.note-body .note-formula{overflow-x:auto}
+.note-body .note-inline-formula{display:inline-block;max-width:100%;height:auto;vertical-align:middle}
 #nav .research-navigation .submenu a{color:#000}
 .menu>.research-navigation:focus-within .submenu{max-height:2000px}
 .menu>.research-navigation:focus-within .submenu li{opacity:1;transform:none}

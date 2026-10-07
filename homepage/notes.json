@@ -8,9 +8,8 @@
     "related_directions": [],
     "source": "pdfs/dit-from-scratch.pdf",
     "path": "notes/dit-from-scratch/",
-    "pdf": "assets/notes/dit-from-scratch.pdf",
-    "pages": 8,
-    "summary": "从 DDPM 到 Diffusion Transformer，梳理时间步嵌入、adaLN 调制与 DiT Block 的核心代码。"
+    "summary": "从 DDPM 到 Diffusion Transformer，梳理时间步嵌入、adaLN 调制与 DiT Block 的核心代码。",
+    "content": "articles/dit-from-scratch.html"
   },
   {
     "title": "深度强化学习中的时序信用分配：问题定义与典型方法",
@@ -21,9 +20,8 @@
     "related_directions": [],
     "source": "pdfs/temporal-credit-assignment.pdf",
     "path": "notes/temporal-credit-assignment/",
-    "pdf": "assets/notes/temporal-credit-assignment.pdf",
-    "pages": 7,
-    "summary": "围绕深度强化学习中的时序信用分配，整理问题定义、MDP 的三类困难以及时间邻近性与回报分解方法。"
+    "summary": "围绕深度强化学习中的时序信用分配，整理问题定义、MDP 的三类困难以及时间邻近性与回报分解方法。",
+    "content": "articles/temporal-credit-assignment.html"
   },
   {
     "title": "从零开始实现Transformer ViT UNet",
@@ -36,9 +34,8 @@
     ],
     "source": "pdfs/transformer-vit-unet-from-scratch.pdf",
     "path": "notes/transformer-vit-unet-from-scratch/",
-    "pdf": "assets/notes/transformer-vit-unet-from-scratch.pdf",
-    "pages": 14,
-    "summary": "记录 Transformer、ViT 与 UNet 的核心模块实现，包括嵌入、位置编码、注意力与网络结构的理解。"
+    "summary": "记录 Transformer、ViT 与 UNet 的核心模块实现，包括嵌入、位置编码、注意力与网络结构的理解。",
+    "content": "articles/transformer-vit-unet-from-scratch.html"
   },
   {
     "title": "从零开始实现ddpm",
@@ -49,9 +46,8 @@
     "related_directions": [],
     "source": "pdfs/ddpm-from-scratch.pdf",
     "path": "notes/ddpm-from-scratch/",
-    "pdf": "assets/notes/ddpm-from-scratch.pdf",
-    "pages": 14,
-    "summary": "从前向加噪与反向去噪的数学原理出发，推导 DDPM 的训练目标并记录核心实现。"
+    "summary": "从前向加噪与反向去噪的数学原理出发，推导 DDPM 的训练目标并记录核心实现。",
+    "content": "articles/ddpm-from-scratch.html"
   },
   {
     "title": "从StarGAN到GAN",

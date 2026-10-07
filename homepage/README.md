@@ -2,14 +2,17 @@
 
 主页沿用原网站的 Hexo Mic 主题、封面与导航。原主页文章已按方向收录为技术笔记，主页保留研究方向入口。
 方向设置参考 [2026 AI 秋招指北](https://guidebook.hustunique.com/docs/AI%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97)。
-已有笔记分为计算机视觉、强化学习、自然语言处理三类；AI 基础知识作为各方向共用的通用基础笔记。Haoran Qian 的四篇 PDF 笔记归入计算机视觉与强化学习，Transformer / ViT / UNet 同时列于自然语言处理。尚无文章的方向保留空状态。
+已有笔记分为计算机视觉、强化学习、自然语言处理三类；AI 基础知识作为各方向共用的通用基础笔记。Haoran Qian 的四篇网页笔记归入计算机视觉与强化学习，Transformer / ViT / UNet 同时列于自然语言处理。尚无文章的方向保留空状态。
 
 ## 修改内容
 
 - `directions.json`：七个方向的名称、简述、标签、页面路径及封面来源。
 - `covers/`：本地论文 / 项目封面原图与来源记录，构建时复制到网站，避免外链图片失效。
 - `notes.json`：原有文章的标题、日期、作者、分类、摘要及原文路径。新增笔记时维护此索引，原文保存在 `source/_posts/`。
-- `pdfs/`：作者提供的 PDF 原文件；`notes.json` 中的 `pdf` 字段启用阅读页和下载入口，`related_directions` 支持跨方向收录，`date_label` 区分收录日期与写作日期。
+- `articles/`：四篇可编辑的 HTML 正文；`notes.json` 的 `content` 指向正文片段。`related_directions` 支持跨方向收录，`date_label` 区分收录日期与写作日期。
+- `note-images/`：正文配图和复杂公式图，构建时复制到网站。文字和代码使用 HTML 排版。
+- `pdfs/`：作者提供的原始文档存档，不复制到网站，也不提供 PDF 入口。
+- `import_notes.py`：一次性导入工具（需 PyMuPDF），从原始文档生成正文及图片；日常编辑直接修改 `articles/`，无需重新转换。
 - `legacy-template.html`：原网站主页模板，保留原始布局与风格。
 - `site.css`：仅新增研究栏目与占位页所需的局部布局样式。
 - `build.py`：页面结构与占位区块。
