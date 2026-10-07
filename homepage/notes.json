@@ -1,9 +1,119 @@
 [
-  {"title":"从StarGAN到GAN","date":"2018-10-08","author":"Handong Ji","direction":"cv","source":"from_StarGAN_to_GAN.md","path":"2018/10/08/from_StarGAN_to_GAN/","summary":"从 GAN、条件 GAN 到图像翻译，梳理 StarGAN 的模型思路。"},
-  {"title":"强化学习入门","date":"2018-09-16","author":"Jiajie Shen","direction":"rl","source":"Start-Reinforcement-Learning.md","path":"2018/09/16/Start-Reinforcement-Learning/","summary":"从环境、状态、动作与奖励出发，理解强化学习的基本概念。"},
-  {"title":"RL:from value to policy","date":"2018-09-12","author":"Zhihao Wang","direction":"rl","source":"RL-from-value-to-policy.md","path":"2018/09/12/RL-from-value-to-policy/","summary":"梳理价值方法、策略梯度与 Actor-Critic 等强化学习算法。"},
-  {"title":"AI基础知识？","date":"2018-07-09","author":"Jiyang Qi","direction":"common","source":"basic-AI-terms.md","path":"2018/07/09/basic-AI-terms/","summary":"关于损失函数、极大似然等机器学习基础概念的学习记录。"},
-  {"title":"whyの学习笔记 深度视觉识别（from CS231n & NTU-ML）","date":"2018-06-06","author":"","direction":"cv","source":"whyの学习笔记-深度视觉识别（from-CS231n）.md","path":"2018/06/06/whyの学习笔记-深度视觉识别（from-CS231n）/","summary":"深度视觉识别学习笔记，涵盖激活函数、神经网络训练等基础。"},
-  {"title":"NLP 文本分类问题","date":"2018-04-23","author":"Hongxin Liu","direction":"nlp","source":"nlp-text-classification.md","path":"2018/04/23/nlp-text-classification/","summary":"整理文本预处理、文本表示、特征提取与分类方法。"},
-  {"title":"物体检测算法总结","date":"2018-02-18","author":"Jiyang Qi","direction":"cv","source":"物体检测算法总结.md","path":"2018/02/18/物体检测算法总结/","summary":"归纳 RCNN 等目标检测算法的主要步骤与模型结构。"}
+  {
+    "title": "从零开始实现DiT",
+    "date": "2026-10-07",
+    "date_label": "收录于",
+    "author": "Haoran Qian",
+    "direction": "cv",
+    "related_directions": [],
+    "source": "pdfs/dit-from-scratch.pdf",
+    "path": "notes/dit-from-scratch/",
+    "pdf": "assets/notes/dit-from-scratch.pdf",
+    "pages": 8,
+    "summary": "从 DDPM 到 Diffusion Transformer，梳理时间步嵌入、adaLN 调制与 DiT Block 的核心代码。"
+  },
+  {
+    "title": "深度强化学习中的时序信用分配：问题定义与典型方法",
+    "date": "2026-10-07",
+    "date_label": "收录于",
+    "author": "Haoran Qian",
+    "direction": "rl",
+    "related_directions": [],
+    "source": "pdfs/temporal-credit-assignment.pdf",
+    "path": "notes/temporal-credit-assignment/",
+    "pdf": "assets/notes/temporal-credit-assignment.pdf",
+    "pages": 7,
+    "summary": "围绕深度强化学习中的时序信用分配，整理问题定义、MDP 的三类困难以及时间邻近性与回报分解方法。"
+  },
+  {
+    "title": "从零开始实现Transformer ViT UNet",
+    "date": "2026-10-07",
+    "date_label": "收录于",
+    "author": "Haoran Qian",
+    "direction": "cv",
+    "related_directions": [
+      "nlp"
+    ],
+    "source": "pdfs/transformer-vit-unet-from-scratch.pdf",
+    "path": "notes/transformer-vit-unet-from-scratch/",
+    "pdf": "assets/notes/transformer-vit-unet-from-scratch.pdf",
+    "pages": 14,
+    "summary": "记录 Transformer、ViT 与 UNet 的核心模块实现，包括嵌入、位置编码、注意力与网络结构的理解。"
+  },
+  {
+    "title": "从零开始实现ddpm",
+    "date": "2026-10-07",
+    "date_label": "收录于",
+    "author": "Haoran Qian",
+    "direction": "cv",
+    "related_directions": [],
+    "source": "pdfs/ddpm-from-scratch.pdf",
+    "path": "notes/ddpm-from-scratch/",
+    "pdf": "assets/notes/ddpm-from-scratch.pdf",
+    "pages": 14,
+    "summary": "从前向加噪与反向去噪的数学原理出发，推导 DDPM 的训练目标并记录核心实现。"
+  },
+  {
+    "title": "从StarGAN到GAN",
+    "date": "2018-10-08",
+    "author": "Handong Ji",
+    "direction": "cv",
+    "source": "from_StarGAN_to_GAN.md",
+    "path": "2018/10/08/from_StarGAN_to_GAN/",
+    "summary": "从 GAN、条件 GAN 到图像翻译，梳理 StarGAN 的模型思路。"
+  },
+  {
+    "title": "强化学习入门",
+    "date": "2018-09-16",
+    "author": "Jiajie Shen",
+    "direction": "rl",
+    "source": "Start-Reinforcement-Learning.md",
+    "path": "2018/09/16/Start-Reinforcement-Learning/",
+    "summary": "从环境、状态、动作与奖励出发，理解强化学习的基本概念。"
+  },
+  {
+    "title": "RL:from value to policy",
+    "date": "2018-09-12",
+    "author": "Zhihao Wang",
+    "direction": "rl",
+    "source": "RL-from-value-to-policy.md",
+    "path": "2018/09/12/RL-from-value-to-policy/",
+    "summary": "梳理价值方法、策略梯度与 Actor-Critic 等强化学习算法。"
+  },
+  {
+    "title": "AI基础知识？",
+    "date": "2018-07-09",
+    "author": "Jiyang Qi",
+    "direction": "common",
+    "source": "basic-AI-terms.md",
+    "path": "2018/07/09/basic-AI-terms/",
+    "summary": "关于损失函数、极大似然等机器学习基础概念的学习记录。"
+  },
+  {
+    "title": "whyの学习笔记 深度视觉识别（from CS231n & NTU-ML）",
+    "date": "2018-06-06",
+    "author": "",
+    "direction": "cv",
+    "source": "whyの学习笔记-深度视觉识别（from-CS231n）.md",
+    "path": "2018/06/06/whyの学习笔记-深度视觉识别（from-CS231n）/",
+    "summary": "深度视觉识别学习笔记，涵盖激活函数、神经网络训练等基础。"
+  },
+  {
+    "title": "NLP 文本分类问题",
+    "date": "2018-04-23",
+    "author": "Hongxin Liu",
+    "direction": "nlp",
+    "source": "nlp-text-classification.md",
+    "path": "2018/04/23/nlp-text-classification/",
+    "summary": "整理文本预处理、文本表示、特征提取与分类方法。"
+  },
+  {
+    "title": "物体检测算法总结",
+    "date": "2018-02-18",
+    "author": "Jiyang Qi",
+    "direction": "cv",
+    "source": "物体检测算法总结.md",
+    "path": "2018/02/18/物体检测算法总结/",
+    "summary": "归纳 RCNN 等目标检测算法的主要步骤与模型结构。"
+  }
 ]
