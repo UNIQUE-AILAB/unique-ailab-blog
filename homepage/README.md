@@ -25,8 +25,8 @@
 python homepage/build.py --output ../UNIQUE-AILAB.github.io
 ```
 
-输出目标应是网站 fork 的检出目录：
-`https://github.com/AetherNoah/UNIQUE-AILAB.github.io`。
+输出目标应是团队网站仓库的检出目录：
+`https://github.com/UNIQUE-AILAB/UNIQUE-AILAB.github.io`。
 脚本生成主页、CSS 和六个方向页，并修正历史 HTML 中的根路径链接以支持项目站点。
 重复构建不会重复添加路径前缀，也不会改写历史文章正文。
 

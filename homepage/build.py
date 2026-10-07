@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-REPO = 'https://github.com/AetherNoah/UNIQUE-AILAB.github.io'
+REPO = 'https://github.com/UNIQUE-AILAB/UNIQUE-AILAB.github.io'
 escape = html.escape
 
 
