@@ -14,4 +14,10 @@
 .research-detail{padding:3rem}
 .research-detail header{text-align:center;margin-bottom:2rem}
 .research-slot{border-top:solid 2px #eee;margin-top:2rem;padding-top:2rem}
+#nav .research-navigation .submenu a{color:#000}
+.menu>.research-navigation:focus-within .submenu{max-height:2000px}
+.menu>.research-navigation:focus-within .submenu li{opacity:1;transform:none}
+#navPanel .research-navigation .submenu{position:static;max-height:none;width:100%;perspective:none}
+#navPanel .research-navigation .submenu li{opacity:1;transform:none}
+#navPanel .research-navigation .submenu a{padding-left:1.5rem}
 @media screen and (max-width:736px){.research-grid{grid-template-columns:1fr}.research-area{padding:0 1rem}.research-card{padding:1.5rem}.research-detail{padding:1.5rem!important}}

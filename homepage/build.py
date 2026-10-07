@@ -13,11 +13,13 @@ escape = html.escape
 
 
 def research_navigation(source, directions):
+    if 'assets/homepage.css' not in source:
+        source = source.replace('</head>', '<link rel="stylesheet" href="/assets/homepage.css">\n</head>', 1)
     entries = ''.join(f'<li><a class="category-link" href="/research/{d["slug"]}/index.html">{escape(d["name"])}</a></li>' for d in directions)
-    menu = f'<li class="research-navigation"><a href="/index.html#research">研究方向</a><ul class="submenu">{entries}</ul></li>'
+    menu = f'<li class="active research-navigation"><a href="/index.html#research">研究方向</a><ul class="submenu">{entries}</ul></li>'
     # Replace the old category menu as well as an already-generated research menu.
     source = re.sub(r'<li>\s*<a href="[^\"]*index.html#research">研究方向</a>\s*</li>\s*', '', source)
-    source = re.sub(r'<li class="(?:active|research-navigation)">\s*<a href="[^\"]*">(?:分类|研究方向)</a>\s*<ul class="submenu">.*?</ul>\s*</li>', menu, source, count=1, flags=re.S)
+    source = re.sub(r'<li class="(?:active(?: research-navigation)?|research-navigation)">\s*<a href="[^\"]*">(?:分类|研究方向)</a>\s*<ul class="submenu">.*?</ul>\s*</li>', menu, source, count=1, flags=re.S)
     return source
 
 
