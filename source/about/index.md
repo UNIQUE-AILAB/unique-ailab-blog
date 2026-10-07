@@ -4,13 +4,17 @@ date: 2017-12-14 17:03:51
 thumbnail: /img/about_thumbnail.jpg
 ---
 # UNIQUE AI Lab
-UNIQUE AI Lab成立于2017年，是由华中科技大学的本科学生自主成立的、一个基于人工智能技术的旨在培养AI精英人才的平台。核心初创成员均来自启明学院联创团队。我们专注于学术型、技术型的研究和应用，基础产学研方向包括机器学习、强化学习、计算机视觉、自然语言处理、语音识别与合成。
+UNIQUE AI Lab 成立于2017年，由华中科技大学本科生自主成立，核心初创成员来自启明学院联创团队。我们以兴趣驱动学习，以实践深化理解，致力于为热爱人工智能的同学提供共同探索与交流的平台。
 
-- 机器学习（Machine Learning）：利用机器学习建模解决大数据问题
-- 强化学习（Deep Reinforcement Learning）: 利用强化学习构建智能体、游戏AI、模仿人类思考与行为
-- 计算机视觉（Computer Vision）：用深度学习技术解决图像的识别、检测、生成、描述
-- 自然语言处理（Natural Language Processing）：使计算机能理解人的自然语言并具备以自然语言文本方式与外界交互的能力
-- 语音识别与合成（ASR & TTS）：使机器能识别人类声音并将声音转化为文字，以及将文字转化为声音
+我们聚焦人工智能的底层算法、模型与训练方法，通过论文阅读、代码复现、实验验证与项目协作积累研究能力。围绕以下七个方向，我们将持续整理项目、技术笔记与学习资料：
+
+- [计算机视觉（Computer Vision）](/research/cv/index.html)：研究图像识别、目标检测、语义分割与视觉生成，让机器从图像中感知和理解世界。
+- [自然语言处理（Natural Language Processing）](/research/nlp/index.html)：研究语言表示、语义理解、文本生成与大语言模型，探索语言和多模态信息的交互。
+- [语音与音频（Speech and Audio）](/research/speech-audio/index.html)：研究语音识别、语音合成与音频处理，从声音中理解信息并生成表达。
+- [3D 视觉（3D Vision）](/research/3d-vision/index.html)：研究三维重建、场景理解与三维生成，从二维观察走向空间建模。
+- [具身智能（Embodied AI）](/research/embodied-ai/index.html)：连接感知、决策与行动，探索智能体在环境交互中的学习与规划。
+- [强化学习（Reinforcement Learning）](/research/rl/index.html)：研究价值学习、策略优化与奖励设计，使智能体通过交互学习决策。
+- [AI for Science](/research/ai4science/index.html)：探索人工智能与生物医学、物理化学、材料及环境等领域的交叉，利用模型与数据支持科学发现。
 
 # Learn More
 [华中科技大学启明学院](https://baike.baidu.com/item/%E5%8D%8E%E4%B8%AD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%90%AF%E6%98%8E%E5%AD%A6%E9%99%A2)
