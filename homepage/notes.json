@@ -1,0 +1,9 @@
+[
+  {"title":"从StarGAN到GAN","date":"2018-10-08","author":"Handong Ji","direction":"cv","source":"from_StarGAN_to_GAN.md","path":"2018/10/08/from_StarGAN_to_GAN/","summary":"从 GAN、条件 GAN 到图像翻译，梳理 StarGAN 的模型思路。"},
+  {"title":"强化学习入门","date":"2018-09-16","author":"Jiajie Shen","direction":"rl","source":"Start-Reinforcement-Learning.md","path":"2018/09/16/Start-Reinforcement-Learning/","summary":"从环境、状态、动作与奖励出发，理解强化学习的基本概念。"},
+  {"title":"RL:from value to policy","date":"2018-09-12","author":"Zhihao Wang","direction":"rl","source":"RL-from-value-to-policy.md","path":"2018/09/12/RL-from-value-to-policy/","summary":"梳理价值方法、策略梯度与 Actor-Critic 等强化学习算法。"},
+  {"title":"AI基础知识？","date":"2018-07-09","author":"Jiyang Qi","direction":"common","source":"basic-AI-terms.md","path":"2018/07/09/basic-AI-terms/","summary":"关于损失函数、极大似然等机器学习基础概念的学习记录。"},
+  {"title":"whyの学习笔记 深度视觉识别（from CS231n & NTU-ML）","date":"2018-06-06","author":"","direction":"cv","source":"whyの学习笔记-深度视觉识别（from-CS231n）.md","path":"2018/06/06/whyの学习笔记-深度视觉识别（from-CS231n）/","summary":"深度视觉识别学习笔记，涵盖激活函数、神经网络训练等基础。"},
+  {"title":"NLP 文本分类问题","date":"2018-04-23","author":"Hongxin Liu","direction":"nlp","source":"nlp-text-classification.md","path":"2018/04/23/nlp-text-classification/","summary":"整理文本预处理、文本表示、特征提取与分类方法。"},
+  {"title":"物体检测算法总结","date":"2018-02-18","author":"Jiyang Qi","direction":"cv","source":"物体检测算法总结.md","path":"2018/02/18/物体检测算法总结/","summary":"归纳 RCNN 等目标检测算法的主要步骤与模型结构。"}
+]
