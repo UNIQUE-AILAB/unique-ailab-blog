@@ -4,6 +4,7 @@ import html
 import json
 import os
 import re
+import shutil
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -35,12 +36,17 @@ def home(template, directions, notes):
     common_count = sum(note['direction'] == 'common' for note in notes)
     for direction in directions:
         count = sum(note['direction'] == direction['slug'] for note in notes)
+        cover = direction['cover']
         cards.append(f'''<article class="link_box special research-card">
+<a class="research-cover research-cover--{escape(cover['kind'])}" href="/research/{direction['slug']}/index.html" tabindex="-1" aria-hidden="true">
+<img src="/assets/research-covers/{escape(cover['file'])}" alt="" loading="lazy" decoding="async" width="640" height="280"></a>
+<div class="research-card-body">
 <h3><a href="/research/{direction['slug']}/index.html">{escape(direction['name'])}</a></h3>
 <p class="research-english">{escape(direction['english'])}</p>
 <p>{escape(direction['summary'])}</p>
 <p class="research-status">{str(count) + ' 篇方向笔记' if count else '方向笔记待补充'} · 通用基础笔记 {common_count} 篇</p>
-<a class="button" href="/research/{direction['slug']}/index.html#notes">浏览笔记</a></article>''')
+<a class="button" href="/research/{direction['slug']}/index.html#notes">浏览笔记</a>
+<a class="research-credit" href="{escape(cover['source'], quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="封面来源：{escape(cover['alt'])}">{escape(cover['label'])} ↗</a></div></article>''')
     section = f'''<section id="research" class="research-area" aria-labelledby="research-title">
 <header class="link_box special research-heading"><h2 id="research-title">研究方向</h2>
 <p>按研究方向浏览团队的技术笔记与学习记录。</p></header>
@@ -101,6 +107,7 @@ def main():
     template = prepare((HERE / 'legacy-template.html').read_text(encoding='utf-8'), directions)
     output.mkdir(parents=True, exist_ok=True)
     (output / 'assets').mkdir(exist_ok=True)
+    shutil.copytree(HERE / 'covers', output / 'assets/research-covers', dirs_exist_ok=True)
     (output / 'assets/homepage.css').write_text((HERE / 'site.css').read_text(encoding='utf-8'), encoding='utf-8')
     (output / 'index.html').write_text(home(template, directions, notes), encoding='utf-8')
     for direction in directions:

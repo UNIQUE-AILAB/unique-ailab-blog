@@ -1,9 +1,142 @@
 [
-  {"slug":"cv","code":"CV","name":"计算机视觉","english":"Computer Vision","summary":"从图像感知到视觉理解，探索让机器看见世界的方法。","topics":["图像识别与低层视觉","目标检测与语义分割","视觉推理与图像生成"]},
-  {"slug":"nlp","code":"NLP","name":"自然语言处理","english":"Natural Language Processing","summary":"理解语言、表示知识，探索语言模型与多模态交互。","topics":["语言表示与语义理解","文本生成与对话","大语言模型与多模态"]},
-  {"slug":"speech-audio","code":"AUDIO","name":"语音与音频","english":"Speech and Audio","summary":"从声音中理解信息，让语言与表达跨越文本的边界。","topics":["语音识别 ASR","语音合成 TTS","声音增强与歌声合成"]},
-  {"slug":"3d-vision","code":"3D","name":"3D 视觉","english":"3D Vision","summary":"从二维观察恢复三维结构，理解和生成空间中的世界。","topics":["三维重建","三维场景理解","三维资产生成"]},
-  {"slug":"embodied-ai","code":"EAI","name":"具身智能","english":"Embodied AI","summary":"连接感知、决策与行动，在环境交互中学习智能行为。","topics":["感知与多模态融合","动作学习与 VLA","世界模型与规划"]},
-  {"slug":"rl","code":"RL","name":"强化学习","english":"Reinforcement Learning","summary":"通过与环境交互学习策略，研究奖励、决策与泛化。","topics":["价值学习与策略优化","奖励设计与环境交互","RLHF 与多智能体"]},
-  {"slug":"ai4science","code":"AI4SCI","name":"AI for Science","english":"AI for Science","summary":"连接人工智能与科学问题，探索数据和模型驱动的科学发现。","topics":["生物医学","物理、化学与材料","地球环境与天文学"]}
+  {
+    "slug": "cv",
+    "code": "CV",
+    "name": "计算机视觉",
+    "english": "Computer Vision",
+    "summary": "从图像感知到视觉理解，探索让机器看见世界的方法。",
+    "topics": [
+      "图像识别与低层视觉",
+      "目标检测与语义分割",
+      "视觉推理与图像生成"
+    ],
+    "cover": {
+      "file": "cv.png",
+      "label": "ViT · 2020",
+      "alt": "Vision Transformer 的图像分块与编码器示意图",
+      "source": "https://github.com/google-research/vision_transformer",
+      "image_source": "https://raw.githubusercontent.com/google-research/vision_transformer/main/vit_figure.png",
+      "kind": "diagram"
+    }
+  },
+  {
+    "slug": "nlp",
+    "code": "NLP",
+    "name": "自然语言处理",
+    "english": "Natural Language Processing",
+    "summary": "理解语言、表示知识，探索语言模型与多模态交互。",
+    "topics": [
+      "语言表示与语义理解",
+      "文本生成与对话",
+      "大语言模型与多模态"
+    ],
+    "cover": {
+      "file": "nlp.png",
+      "label": "Transformer · 2017",
+      "alt": "Transformer 编码器与解码器架构图",
+      "source": "https://nlp.seas.harvard.edu/annotated-transformer/",
+      "image_source": "https://nlp.seas.harvard.edu/annotated-transformer/",
+      "kind": "diagram"
+    }
+  },
+  {
+    "slug": "speech-audio",
+    "code": "AUDIO",
+    "name": "语音与音频",
+    "english": "Speech and Audio",
+    "summary": "从声音中理解信息，让语言与表达跨越文本的边界。",
+    "topics": [
+      "语音识别 ASR",
+      "语音合成 TTS",
+      "声音增强与歌声合成"
+    ],
+    "cover": {
+      "file": "speech-audio.png",
+      "label": "Whisper · 2022",
+      "alt": "Whisper 多任务语音识别与序列建模示意图",
+      "source": "https://github.com/openai/whisper",
+      "image_source": "https://raw.githubusercontent.com/openai/whisper/main/approach.png",
+      "kind": "diagram"
+    }
+  },
+  {
+    "slug": "3d-vision",
+    "code": "3D",
+    "name": "3D 视觉",
+    "english": "3D Vision",
+    "summary": "从二维观察恢复三维结构，理解和生成空间中的世界。",
+    "topics": [
+      "三维重建",
+      "三维场景理解",
+      "三维资产生成"
+    ],
+    "cover": {
+      "file": "3d-vision.png",
+      "label": "3D Gaussian Splatting · 2023",
+      "alt": "3D Gaussian Splatting 的自行车场景重建结果对比",
+      "source": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/",
+      "image_source": "https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/main/assets/teaser.png",
+      "kind": "scene"
+    }
+  },
+  {
+    "slug": "embodied-ai",
+    "code": "EAI",
+    "name": "具身智能",
+    "english": "Embodied AI",
+    "summary": "连接感知、决策与行动，在环境交互中学习智能行为。",
+    "topics": [
+      "感知与多模态融合",
+      "动作学习与 VLA",
+      "世界模型与规划"
+    ],
+    "cover": {
+      "file": "embodied-ai.jpg",
+      "label": "OpenVLA · 2024",
+      "alt": "OpenVLA 视觉语言动作模型与机器人操作示例",
+      "source": "https://openvla.github.io/",
+      "image_source": "https://openvla.github.io/static/images/openvla_teaser.jpg",
+      "kind": "diagram"
+    }
+  },
+  {
+    "slug": "rl",
+    "code": "RL",
+    "name": "强化学习",
+    "english": "Reinforcement Learning",
+    "summary": "通过与环境交互学习策略，研究奖励、决策与泛化。",
+    "topics": [
+      "价值学习与策略优化",
+      "奖励设计与环境交互",
+      "RLHF 与多智能体"
+    ],
+    "cover": {
+      "file": "rl.png",
+      "label": "DreamerV3 · 2023",
+      "alt": "DreamerV3 世界模型学习与策略学习示意图",
+      "source": "https://github.com/danijar/dreamerv3",
+      "image_source": "https://user-images.githubusercontent.com/2111293/217355673-4abc0ce5-1a4b-4366-a08d-64754289d659.png",
+      "kind": "diagram"
+    }
+  },
+  {
+    "slug": "ai4science",
+    "code": "AI4SCI",
+    "name": "AI for Science",
+    "english": "AI for Science",
+    "summary": "连接人工智能与科学问题，探索数据和模型驱动的科学发现。",
+    "topics": [
+      "生物医学",
+      "物理、化学与材料",
+      "地球环境与天文学"
+    ],
+    "cover": {
+      "file": "ai4science.jpg",
+      "label": "AlphaFold · 2021",
+      "alt": "AlphaFold 官方项目中的蛋白质结构配图",
+      "source": "https://github.com/google-deepmind/alphafold",
+      "image_source": "https://raw.githubusercontent.com/google-deepmind/alphafold/main/imgs/header.jpg",
+      "kind": "scene"
+    }
+  }
 ]
