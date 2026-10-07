@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "fraudlens",
+    "name": "FraudLens · 反诈透镜",
+    "subtitle": "可解释的金融反诈研判与交互式劝阻助手",
+    "award": "2026 年睿抗机器人开发者大赛（RAICOM）全国一等奖",
+    "summary": "面向可疑聊天、短信、链接和转账要求，将多轮风险研判、知识检索、证据解释、劝阻建议与情景复盘整合为一套本地优先的 Web 应用。",
+    "repository": "https://github.com/Arison591/fraudlens",
+    "upstream": "https://github.com/chenge-skr/raicom-",
+    "cover": "fraudlens-overview.png",
+    "analysis_image": "fraudlens-analysis.png",
+    "tags": ["Hybrid RAG", "多 Agent", "Python / Flask", "SQLite", "交互式反诈"],
+    "features": [
+      {"title": "连续理解风险", "description": "追踪付款状态、金额、敏感信息与诈骗阶段，结合多轮对话更新风险研判和行动建议。"},
+      {"title": "让判断有依据", "description": "Markdown 与 SQLite 双来源知识检索，结合规则型多 Agent 和交叉核验，展示命中证据与分析过程。"},
+      {"title": "从提醒到复盘", "description": "连接场景化报告、本地举报草稿和五类情景模拟，结合积分、勋章提供互动学习反馈。"}
+    ]
+  }
+]

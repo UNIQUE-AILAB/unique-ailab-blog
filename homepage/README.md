@@ -16,6 +16,8 @@
 - `legacy-template.html`：原网站主页模板，保留原始布局与风格。
 - `site.css`：仅新增研究栏目与占位页所需的局部布局样式。
 - `build.py`：页面结构与占位区块。
+- `projects.json`：Project 栏目的项目名称、介绍、获奖信息、技术标签与仓库链接。
+- `project-images/`：项目真实运行截图，构建时复制到 `assets/project-images/`。目前收录 FraudLens（反诈透镜），突出 2026 年睿抗机器人开发者大赛全国一等奖。
 
 ## 生成网站
 
@@ -27,7 +29,7 @@ python homepage/build.py --output ../UNIQUE-AILAB.github.io
 
 输出目标应是团队网站仓库的检出目录：
 `https://github.com/UNIQUE-AILAB/UNIQUE-AILAB.github.io`。
-脚本生成主页、CSS 和六个方向页，并修正历史 HTML 中的根路径链接以支持项目站点。
+脚本生成主页、CSS、六个方向页、Project 列表与项目详情页，并修正历史 HTML 中的根路径链接以支持项目站点。
 重复构建不会重复添加路径前缀，也不会改写历史文章正文。
 
 提交本仓库的源码修改，再提交并推送网站仓库的生成结果。
