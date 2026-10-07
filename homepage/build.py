@@ -35,11 +35,19 @@ def prepare(template, directions):
     return '\n'.join(line.rstrip().expandtabs(4) for line in template.split('\n'))
 
 
-def home(template, directions, notes):
+def home(template, directions, notes, repositories):
     cards = []
     common_count = sum(note['direction'] == 'common' for note in notes)
     for direction in directions:
         count = sum(belongs_to(note, direction['slug']) for note in notes)
+        selected_repositories = [repo for repo in repositories if belongs_to(repo, direction['slug'])]
+        repository_links = ''.join(
+            f'<li><a href="{escape(repo["url"], quote=True)}" target="_blank" rel="noopener noreferrer">{escape(repo["title"])} ↗</a></li>'
+            for repo in selected_repositories
+        )
+        repository_links = f'<ul class="research-repository-links" aria-label="代码与研究资料">{repository_links}</ul>' if repository_links else ''
+        browse_anchor = 'notes' if count or not selected_repositories else 'repositories'
+        browse_label = '浏览笔记' if count or not selected_repositories else '浏览资料'
         cover = direction['cover']
         cards.append(f'''<article class="link_box special research-card">
 <a class="research-cover research-cover--{escape(cover['kind'])}" href="/research/{direction['slug']}/index.html" tabindex="-1" aria-hidden="true">
@@ -49,7 +57,8 @@ def home(template, directions, notes):
 <p class="research-english">{escape(direction['english'])}</p>
 <p>{escape(direction['summary'])}</p>
 <p class="research-status">{str(count) + ' 篇方向笔记' if count else '方向笔记待补充'} · 通用基础笔记 {common_count} 篇</p>
-<a class="button" href="/research/{direction['slug']}/index.html#notes">浏览笔记</a>
+{repository_links}
+<a class="button" href="/research/{direction['slug']}/index.html#{browse_anchor}">{browse_label}</a>
 <a class="research-credit" href="{escape(cover['source'], quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="封面来源：{escape(cover['alt'])}">{escape(cover['label'])} ↗</a></div></article>''')
     section = f'''<section id="research" class="research-area" aria-labelledby="research-title">
 <header class="link_box special research-heading"><h2 id="research-title">研究方向</h2>
@@ -73,12 +82,25 @@ def note_list(notes):
     return '<ul class="research-notes">' + ''.join(items) + '</ul>'
 
 
-def detail(template, direction, notes):
+def repository_list(repositories):
+    if not repositories:
+        return '<p class="research-status">项目介绍、代码仓库与研究资料待更新。</p>'
+    items = []
+    for repo in repositories:
+        url = escape(repo['url'], quote=True)
+        items.append(f'''<li class="research-note"><h3><a href="{url}" target="_blank" rel="noopener noreferrer">{escape(repo['title'])}</a></h3>
+<p class="research-status">{escape(repo['author'])} · GitHub 仓库</p>
+<p>{escape(repo['summary'])}</p><a href="{url}" target="_blank" rel="noopener noreferrer">访问仓库 ↗</a></li>''')
+    return '<ul class="research-notes">' + ''.join(items) + '</ul>'
+
+
+def detail(template, direction, notes, repositories):
     head = template.split('</head>', 1)[0] + '</head>'
     head = re.sub(r'<title>.*?</title>', f'<title>{escape(direction["name"])} · Unique AI Lab</title>', head, flags=re.S)
     nav = template.split('<nav id="nav"', 1)[1].split('</nav>', 1)[0]
     nav = '<nav id="nav"' + nav + '</nav>'
     selected = [note for note in notes if belongs_to(note, direction['slug'])]
+    selected_repositories = [repo for repo in repositories if belongs_to(repo, direction['slug'])]
     common = [note for note in notes if note['direction'] == 'common']
     content = note_list(selected) if selected else '<p class="research-status">暂无本方向笔记，后续持续补充。</p>'
     topics = ''.join(f'<li>{escape(topic)}</li>' for topic in direction['topics'])
@@ -89,7 +111,7 @@ def detail(template, direction, notes):
 <ul>{topics}</ul>
 <section class="research-slot" id="notes"><h2>技术笔记</h2>{content}</section>
 <section class="research-slot" id="common-notes"><h2>通用基础笔记</h2><p>各方向共用的机器学习基础知识。</p>{note_list(common)}</section>
-<section class="research-slot"><h2>项目与实验</h2><p class="research-status">项目介绍、代码仓库与实验记录待更新。</p></section>
+<section class="research-slot" id="repositories"><h2>代码与研究资料</h2>{repository_list(selected_repositories)}</section>
 <p><a class="button" href="/index.html#research">返回研究方向</a></p></article></main>
 <div id="copyright"><span>Unique AI Lab</span></div></div></body></html>\n'''
 
@@ -105,7 +127,7 @@ def relative_links(source, output, target):
 
 def article_page(template, note, directions):
     direction = next(d for d in directions if d['slug'] == note['direction'])
-    page = detail(template, direction, [])
+    page = detail(template, direction, [], [])
     page = re.sub(r'<title>.*?</title>', f'<title>{escape(note["title"])} · {escape(note["author"])} · Unique AI Lab</title>', page)
     page = page.replace('</head>', '<link rel="stylesheet" href="/css/typo.css">\n</head>')
     categories = ' · '.join(f'<a href="/research/{d["slug"]}/index.html#notes">{escape(d["name"])}</a>' for d in directions if belongs_to(note, d['slug']))
@@ -125,17 +147,18 @@ def main():
     output = parser.parse_args().output.resolve()
     directions = json.loads((HERE / 'directions.json').read_text(encoding='utf-8'))
     notes = json.loads((HERE / 'notes.json').read_text(encoding='utf-8'))
+    repositories = json.loads((HERE / 'repositories.json').read_text(encoding='utf-8'))
     template = prepare((HERE / 'legacy-template.html').read_text(encoding='utf-8'), directions)
     output.mkdir(parents=True, exist_ok=True)
     (output / 'assets').mkdir(exist_ok=True)
     shutil.copytree(HERE / 'covers', output / 'assets/research-covers', dirs_exist_ok=True)
     shutil.copytree(HERE / 'note-images', output / 'assets/note-images', dirs_exist_ok=True)
     (output / 'assets/homepage.css').write_text((HERE / 'site.css').read_text(encoding='utf-8'), encoding='utf-8')
-    (output / 'index.html').write_text(home(template, directions, notes), encoding='utf-8')
+    (output / 'index.html').write_text(home(template, directions, notes, repositories), encoding='utf-8')
     for direction in directions:
         target = output / 'research' / direction['slug'] / 'index.html'
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(detail(template, direction, notes), encoding='utf-8')
+        target.write_text(detail(template, direction, notes, repositories), encoding='utf-8')
     for note in notes:
         if 'content' in note:
             target = output / note['path'] / 'index.html'

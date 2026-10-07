@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Coding-from-Zero-Series",
+    "author": "Arison591",
+    "direction": "cv",
+    "related_directions": ["nlp"],
+    "url": "https://github.com/UNIQUE-AILAB/Coding-from-Zero-Series",
+    "summary": "从零实现 VAE、Transformer、ViT、UNet、DDPM 与 DiT，记录经典神经网络和生成模型的核心算法代码。"
+  },
+  {
+    "title": "world-model-research-notes",
+    "author": "Arison591",
+    "direction": "embodied-ai",
+    "related_directions": ["rl"],
+    "url": "https://github.com/UNIQUE-AILAB/world-model-research-notes",
+    "summary": "World Model 中文论文阅读与研究笔记，涵盖 Dreamer、LingBot、基于模型的强化学习、交互式生成与具身智能。"
+  }
+]

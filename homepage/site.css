@@ -15,6 +15,8 @@
 .research-card p{margin-bottom:1rem}
 .research-card .research-english{font-size:.9rem}
 .research-card .button{margin-top:auto}
+.research-repository-links{list-style:none;padding:0;margin:0 0 1rem;width:100%;font-size:.85rem;line-height:1.7}
+.research-repository-links li{padding:0;overflow-wrap:anywhere}
 .research-status{color:#717981;font-size:.9rem}
 .research-heading .research-source,.research-detail .research-source{color:#717981;font-size:.9rem;margin-top:1rem}
 .research-detail{padding:3rem}

@@ -9,6 +9,7 @@
 - `directions.json`：六个方向的名称、简述、标签、页面路径及封面来源。
 - `covers/`：本地论文 / 项目封面原图与来源记录，构建时复制到网站，避免外链图片失效。
 - `notes.json`：原有文章的标题、日期、作者、分类、摘要及原文路径。新增笔记时维护此索引，原文保存在 `source/_posts/`。
+- `repositories.json`：团队代码仓库与研究资料的标题、作者、简介和 GitHub 地址；`direction` 与 `related_directions` 控制主页卡片及方向页中的归档。Coding-from-Zero-Series 收录于计算机视觉与自然语言处理，world-model-research-notes 收录于具身智能与强化学习。
 - `articles/`：四篇可编辑的 HTML 正文；`notes.json` 的 `content` 指向正文片段。`related_directions` 支持跨方向收录，`date_label` 区分收录日期与写作日期。
 - `note-images/`：正文配图和复杂公式图，构建时复制到网站。文字和代码使用 HTML 排版。
 - `pdfs/`：作者提供的原始文档存档，不复制到网站，也不提供 PDF 入口。
