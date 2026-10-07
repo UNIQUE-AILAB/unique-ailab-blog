@@ -10,7 +10,7 @@
 .research-card .research-english{font-size:.9rem}
 .research-card .button{margin-top:auto}
 .research-status{color:#717981;font-size:.9rem}
-.research-source{color:#fff;text-align:center;margin:1.5rem 0}
+.research-heading .research-source,.research-detail .research-source{color:#717981;font-size:.9rem;margin-top:1rem}
 .research-detail{padding:3rem}
 .research-detail header{text-align:center;margin-bottom:2rem}
 .research-slot{border-top:solid 2px #eee;margin-top:2rem;padding-top:2rem}
